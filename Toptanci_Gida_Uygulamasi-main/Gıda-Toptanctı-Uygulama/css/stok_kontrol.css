@@ -50,8 +50,6 @@ body {
 
 
 
-
-
 /* SIDEBAR */
 #sidebar {
 	position: fixed;
@@ -604,4 +602,8 @@ body {
 }
 #content nav #switch-mode:checked + .switch-mode::before {
 	left: calc(100% - (25px - 4px) - 2px);
+}
+
+.dark .bx.bxs-moon {
+	color: white
 }
