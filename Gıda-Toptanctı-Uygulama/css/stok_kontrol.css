@@ -416,7 +416,7 @@ body {
 }
 #content main .table-data > div {
 	border-radius: 20px;
-	background: #e0dfdf;
+	background: var(--light);
 	padding: 24px;
 	overflow-x: auto;
 }
@@ -582,65 +582,26 @@ body {
 		min-width: 420px;
 	}
 }
-/* .table-data {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
-
-.order {
-  background-color: darkmagenta;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#content nav .switch-mode {
+	display: block;
+	min-width: 50px;
+	height: 25px;
+	border-radius: 25px;
+	background: var(--grey);
+	cursor: pointer;
+	position: relative;
 }
-
-.container {
-  text-align: center;
+#content nav .switch-mode::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	bottom: 2px;
+	width: calc(25px - 4px);
+	background: var(--blue);
+	border-radius: 50%;
+	transition: all .3s ease;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-.container h1{
-	text-align: left;
-}
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-label {
-  font-weight: bold;
-  text-align: left;
-}
-
-input[type="text"],
-input[type="number"] {
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-#ürünEkleButton,
-#ürünGuncelleButton,
-#ürünSilButton {
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  background-color: #3C91E6;
-  color: #fff;
-  margin-top: 0.5rem;
-  width: 100%;
-}
-
-#ürünEkleButton:hover,
-#ürünGuncelleButton:hover,
-#ürünSilButton:hover {
-  background-color: #1e5aa8;
-  cursor: pointer;
+#content nav #switch-mode:checked + .switch-mode::before {
+	left: calc(100% - (25px - 4px) - 2px);
 }
