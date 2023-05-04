@@ -173,6 +173,7 @@ body {
 	left: 60px;
 }
 
+/* NAVBAR */
 #content nav {
 	height: 56px;
 	background: var(--light);
@@ -401,6 +402,10 @@ body {
 	color: var(--dark);	
 }
 
+
+
+
+
 #content main .table-data {
 	display: flex;
 	flex-wrap: wrap;
@@ -513,13 +518,6 @@ body {
 /* CONTENT */
 
 
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
 	#sidebar {
 		width: 200px;
@@ -584,35 +582,88 @@ body {
 		min-width: 420px;
 	}
 }
-form {
-display: flex;
-flex-direction: column;
+/* .table-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.order {
+  background-color: darkmagenta;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.container {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+.container h1{
+	text-align: left;
+}
 .form-group {
-margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 label {
-font-weight: bold;
-margin-bottom: 5px;
-display: block;
+  font-weight: bold;
+  text-align: left;
 }
 
 input[type="text"],
 input[type="number"] {
-padding: 10px;
-border: none;
-border-radius: 5px;
-width: 100%;
-box-sizing: border-box;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 
-button {
-	border-radius: 0.5rem;
-	padding: 0.5rem;
-	background-color: #3C91E6;
-	color: #fff;
-	margin-top: 0.5rem;
-	width: 100%;
+#ürünEkleButton,
+#ürünGuncelleButton,
+#ürünSilButton {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #3C91E6;
+  color: #fff;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+#ürünEkleButton:hover,
+#ürünGuncelleButton:hover,
+#ürünSilButton:hover {
+  background-color: #1e5aa8;
+  cursor: pointer;
+}
+#content nav .switch-mode {
+	display: block;
+	min-width: 50px;
+	height: 25px;
+	border-radius: 25px;
+	background: var(--grey);
+	cursor: pointer;
+	position: relative;
+}
+#content nav .switch-mode::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	bottom: 2px;
+	width: calc(25px - 4px);
+	background: var(--blue);
+	border-radius: 50%;
+	transition: all .3s ease;
+}
+#content nav #switch-mode:checked + .switch-mode::before {
+	left: calc(100% - (25px - 4px) - 2px);
 }

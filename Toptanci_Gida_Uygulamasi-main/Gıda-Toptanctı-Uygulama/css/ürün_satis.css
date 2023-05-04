@@ -173,7 +173,6 @@ body {
 	left: 60px;
 }
 
-/* NAVBAR */
 #content nav {
 	height: 56px;
 	background: var(--light);
@@ -402,10 +401,6 @@ body {
 	color: var(--dark);	
 }
 
-
-
-
-
 #content main .table-data {
 	display: flex;
 	flex-wrap: wrap;
@@ -416,7 +411,7 @@ body {
 }
 #content main .table-data > div {
 	border-radius: 20px;
-	background: var(--light);
+	background: #e0dfdf;
 	padding: 24px;
 	overflow-x: auto;
 }
@@ -518,6 +513,13 @@ body {
 /* CONTENT */
 
 
+
+
+
+
+
+
+
 @media screen and (max-width: 768px) {
 	#sidebar {
 		width: 200px;
@@ -581,4 +583,59 @@ body {
 	#content main .table-data .todo .todo-list {
 		min-width: 420px;
 	}
+}
+form {
+display: flex;
+flex-direction: column;
+}
+
+.form-group {
+margin-bottom: 15px;
+}
+
+label {
+font-weight: bold;
+margin-bottom: 5px;
+display: block;
+}
+
+input[type="text"],
+input[type="number"] {
+padding: 10px;
+border: none;
+border-radius: 5px;
+width: 100%;
+box-sizing: border-box;
+}
+
+button {
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	background-color: #3C91E6;
+	color: #fff;
+	margin-top: 0.5rem;
+	width: 100%;
+}
+#content nav .switch-mode {
+	display: block;
+	min-width: 50px;
+	height: 25px;
+	border-radius: 25px;
+	background: var(--grey);
+	cursor: pointer;
+	position: relative;
+}
+#content nav .switch-mode::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	bottom: 2px;
+	width: calc(25px - 4px);
+	background: var(--blue);
+	border-radius: 50%;
+	transition: all .3s ease;
+}
+#content nav #switch-mode:checked + .switch-mode::before {
+	left: calc(100% - (25px - 4px) - 2px);
 }
